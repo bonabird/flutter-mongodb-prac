@@ -1,5 +1,5 @@
 // IMPORTS FROM PACKAGES
-require('dotenv').config();
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const adminRouter = require("./routes/admin.js");
@@ -10,7 +10,7 @@ const authRouter = require("./routes/auth.js");
 // INITs
 const PORT = 3000;
 const app = express();
-const DB = dotenv.MONGO_URI
+const DB = process.env.MONGO_URI;
 
 //middleware
 app.use(express.json());
