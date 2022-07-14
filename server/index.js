@@ -6,6 +6,7 @@ const adminRouter = require("./routes/admin.js");
 
 // IMPORTS FROM OTHER FILES
 const authRouter = require("./routes/auth.js");
+const { default: productRouter } = require("./routes/product.js");
 
 // INITs
 const PORT = 3000;
@@ -16,6 +17,7 @@ const DB = process.env.MONGO_URI;
 app.use(express.json());
 app.use(authRouter);
 app.use(adminRouter);
+app.use(productRouter);
 
 // Connections
 mongoose
